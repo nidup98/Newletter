@@ -60,8 +60,8 @@ app.post("/failure.html", function(req, res){
 })
 
 //Deploying the app to heroku
-app.listen(process.evn.PORT || 3000, function(){
-  console.log("Server running at port 3000");
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
 
